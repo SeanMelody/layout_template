@@ -7,6 +7,7 @@ nav {
 .nav-links {
   position: absolute;
   top: 50%;
+  /* centers the top line, not the mid, so have to add translate */
   right: 20px;
   transform: translate(0%, -50%);
 }
@@ -15,6 +16,7 @@ nav {
   display: inline;
 }
 
+/* last child makes it not apply to the last item in the class */
 .nav-links li:not(:last-child) {
   margin-right: 10px;
 }
@@ -29,6 +31,7 @@ main {
   height: 80vh;
 }
 
+/* clearfix is important when floating */
 .clearfix::after {
   content: "";
   clear: both;
@@ -44,16 +47,50 @@ main {
 .left {
   background-color: teal;
   float: left;
-  height: 80vh;
+  /* vh is view height */
+}
+
+.top {
+  height: 50%;
+  background-color: red;
+}
+
+.grid1 {
+  height: 50%;
+  width: 50%;
+  background-color: lavenderblush;
+  float: left;
+}
+
+.grid2 {
+  height: 50%;
+  width: 50%;
+  background-color: orange;
+  float: left;
+}
+
+.grid3 {
+  height: 50%;
+  width: 50%;
+  background-color: greenyellow;
+  float: left;
+}
+.grid4 {
+  height: 50%;
+  width: 50%;
+  background-color: purple;
+  float: left;
 }
 
 .right {
   background-color: thistle;
   float: right;
+  /* this is the parent, then plus the next four lines center */
   position: relative;
 }
 
 .center {
+  /* next 4 lines center the box!!! */
   position: absolute;
   top: 50%;
   left: 50%;
